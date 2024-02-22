@@ -1,0 +1,298 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+body {
+  background-color: #292524;
+  font-family: "Kanit", sans-serif;
+  color: #fafaf9;
+  padding: 48px 64px;
+}
+
+#root {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo img {
+  height: 68px;
+  width: 68px;
+  border-radius: 40px;
+}
+
+.category {
+  margin-bottom: 16px;
+}
+
+.opinion {
+  font-size: 20px;
+  line-height: 1.4;
+  background-color: #44403c;
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-radius: 16px;
+}
+
+@media (max-width: 1200px) {
+  .opinion {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "DM Serif Display", serif;
+  font-weight: bold;
+  padding: 0px 10px;
+  border-radius: 100px;
+}
+
+ul {
+  list-style: none;
+}
+
+.author {
+  color: #a8a29e;
+  margin-left: 12px;
+}
+
+.op-text {
+  display: flex;
+}
+
+.btn {
+  border: none;
+  font-family: "Coiny";
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 16px 0 13px;
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+  color: inherit;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large {
+  font-style: 20px;
+  padding: 20px 32px 17px;
+}
+
+.btn-all-categories {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.btn-category {
+  width: 100%;
+  background-image: none;
+}
+
+.vote-buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.vote-buttons button {
+  background-color: #78716c;
+  border: none;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: inherit;
+  font-family: "Coiny";
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vote-buttons button:hover {
+  background-color: #292524;
+}
+
+.sort {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-direction: column;
+}
+
+.sort-text {
+  font-size: larger;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sort-btns {
+  margin: auto;
+}
+
+.sort-btn {
+  margin: 0px 14px;
+  width: 120px;
+}
+
+@media (max-width: 610px) {
+  .sort-btn {
+    margin: 0px 10px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 495px) {
+  .sort-text {
+    font-size: large;
+  }
+  .sort-btn {
+    margin: 0px 5px;
+    width: 75px;
+    font-size: 13px;
+  }
+}
+
+.opinion-form {
+  background-color: #44403c;
+  margin-bottom: 40px;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+}
+
+.opinion-form input,
+.opinion-form select {
+  background-color: #78716c;
+  border-radius: 100px;
+  padding: 16px;
+  font-size: 18px;
+  color: inherit;
+  font-family: inherit;
+  width: 220px;
+}
+
+.opinion-form input::placeholder {
+  color: #a8a29e;
+}
+
+.opinion-form span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 18px;
+}
+
+.opinion-form input :first-child {
+  flex-grow: 1;
+}
+
+@media (max-width: 1035px) {
+  body {
+    padding: 32px 48px;
+  }
+
+  .opinion-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .opinion-form input,
+  .opinion-form select {
+    width: auto;
+  }
+}
+
+.header button {
+  margin-left: 10px;
+}
+
+@media (max-width: 875px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .header button {
+    font-size: 12px;
+    padding: 15px 24px 13px;
+  }
+
+  .logo img {
+    height: 56px;
+    width: 56px;
+  }
+}
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .header button {
+    font-size: 9px;
+    padding: 10px 16px 9px;
+  }
+
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+}
